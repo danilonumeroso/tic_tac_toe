@@ -38,11 +38,11 @@ where:
 
 4. **Stopping Criteria**: Repeat step 2 until the change in the value function $\Delta V$ is below a predefined threshold.
 
-5. **Output**: The resulting value function \( V^* \) is the optimal value function, and the optimal policy can be derived from it.
+5. **Output**: The resulting value function $V^\*$ is the optimal value function, and the optimal policy can be derived from it.
 
 The optimal policy is then obtained by selecting the action that maximizes the expression inside the argmax in the Bellman equation for each state (function `extract_policy` in `code/src/value_iteration.js`): 
 
-$\pi^\*(s) \leftarrow \arg\max_{a \in A} \left( R(s, a) + \gamma \sum_{s' \in S} P(s' \mid s, a) V(s') \right)$
+$\pi^\*(s) \leftarrow \arg\max_{a \in A} \left( R(s, a) + \gamma \sum_{s' \in S} P(s' \mid s, a) V^\*(s') \right)$
 
 ## Acknowledgments
 I shamelessly stole the CSS file from [WebDevSimplified](https://github.com/WebDevSimplified/JavaScript-Tic-Tac-Toe/) (many thanks!)
